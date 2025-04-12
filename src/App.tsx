@@ -10,6 +10,9 @@ function App() {
       <Menu />
       <Footer />
     </div>
+    // <div>
+    //   <ProfileCard skills={["Mtb", "JS", "CSS", "HTML", "React"]} />
+    // </div>
   );
 }
 
