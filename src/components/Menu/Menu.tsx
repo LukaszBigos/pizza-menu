@@ -3,14 +3,20 @@ import { Pizza } from "../Pizza/Pizza.tsx";
 import { pizzaData } from "../../data";
 
 const Menu = () => {
+  const pizzas = pizzaData.length;
   return (
-    <div className="menu">
-      <ul className="pizzas">
-        {pizzaData.map((pizza) => (
-          <Pizza pizza={pizza} />
-        ))}
-      </ul>
-    </div>
+    <main className="menu">
+      <h2>Our menu</h2>
+      {pizzas > 0 ? (
+        <ul className="pizzas">
+          {pizzaData.map((pizza) => (
+            <Pizza pizza={pizza} />
+          ))}
+        </ul>
+      ) : (
+        <p>Sorry, no pizzas available</p>
+      )}
+    </main>
   );
 };
 
